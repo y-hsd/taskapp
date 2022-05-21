@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TaskApp</title>
+    <title>ScheduleApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,17 @@
   </head>
 
   <body>
-    <%= yield %>
+
+        <header>
+          <h1>Ruby on Rails スケジュール管理アプリ</h1>
+        </header>
+        <div class="maincontainer">
+          <%= yield %>
+        </div>
+        <footer>
+          <h2 id="showTime"></h2>
+          <h2>スケジュール合計： <%= Post.count %></h2>
+        </footer>
   </body>
 </html>
+
